@@ -10,3 +10,4 @@ CREATE TABLE animals (
     weight_kg DECIMAL,
     PRIMARY KEY(id)
 );
+ALTER TABLE animals RENAME escape_attempt TO escape_attempts;
