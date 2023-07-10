@@ -7,6 +7,6 @@ SELECT date_of_birth FROM animals WHERE name = 'Agumon' OR name='Pikachu';
 SELECT * FROM animals WHERE neutered=true;
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 SELECT * FROM animals WHERE name NOT IN('Gabumon');
-ALTER TABLE animals RENAME escape_attempt TO escape_attempts;
+
 
 
