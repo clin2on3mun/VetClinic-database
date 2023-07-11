@@ -26,7 +26,6 @@
 
 # 📖 [Vet Clinic] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
 
 **[Vet Clinic]** is a Database project using postgres to create tables that store animals data
 
@@ -34,7 +33,6 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 <details>
 <summary>Database</summary>
   <ul>
@@ -46,8 +44,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[create database in Postgresql using CLI]**
 - **[Create tables]**
 - **[insert data in tables]**
@@ -58,8 +54,6 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](Demo not available)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -67,8 +61,6 @@
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
@@ -127,7 +119,6 @@ follow all the previous steps
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
 
 👤 **Author1**
 
@@ -141,7 +132,6 @@ follow all the previous steps
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Add animal owner table]**
 - [ ] **[Add Doctor Table]**
@@ -162,8 +152,6 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project please give me a star, I will be really happy.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -171,8 +159,6 @@ If you like this project please give me a star, I will be really happy.
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank microverse
 
