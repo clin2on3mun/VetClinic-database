@@ -24,7 +24,7 @@ SELECT * as animals FROM animals;
 COMMIT;
 
 BEGIN;
-vet_clinic=*# DELETE FROM ANIMALS;
+DELETE FROM ANIMALS;
 SELECT * as animals FROM animals;
 ROLLBACK;
 
