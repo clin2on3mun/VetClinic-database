@@ -11,7 +11,7 @@ SELECT * FROM animals WHERE name NOT IN('Gabumon');
 /*transaction queries*/
 BEGIN; 
 UPDATE animals SET species='unspecified';
-SELECT * as animals FROM animals;
+SELECT * FROM animals;
 ROLLBACK;
 SELECT *  FROM animals;
 
