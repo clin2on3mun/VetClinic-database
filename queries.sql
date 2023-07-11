@@ -8,6 +8,7 @@ SELECT * FROM animals WHERE neutered=true;
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 SELECT * FROM animals WHERE name NOT IN('Gabumon');
 
+/*transaction queries*/
 BEGIN; 
 UPDATE animals SET species='unspecified';
 ROLLBACK;
@@ -38,6 +39,7 @@ SET weight_kg=weight_kg* -1
 WHERE weight_kg<0;
 COMMIT;
 
+/*aggregate queries*/
 SELECT COUNT(*) as animals FROM animals;
 SELECT COUNT(*) as Never_escaped FROM animals WHERE escape_attempts=0;
 SELECT AVG(weight_kg) as Average_animal_weight FROM animals;
