@@ -11,3 +11,4 @@ CREATE TABLE animals (
     PRIMARY KEY(id)
 );
 ALTER TABLE animals RENAME escape_attempt TO escape_attempts;
+ALTER TABLE animals ADD species VARCHAR;
