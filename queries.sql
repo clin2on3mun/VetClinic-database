@@ -11,6 +11,7 @@ SELECT * FROM animals WHERE name NOT IN('Gabumon');
 /*transaction queries*/
 BEGIN; 
 UPDATE animals SET species='unspecified';
+SELECT * as animals FROM animals;
 ROLLBACK;
 
 BEGIN;
@@ -19,10 +20,12 @@ SET species='digimon'
 WHERE name LIKE '%mon';
 UPDATE animals SET species='pokemon'
 WHERE species IS NULL;
+SELECT * as animals FROM animals;
 COMMIT;
 
 BEGIN;
 vet_clinic=*# DELETE FROM ANIMALS;
+SELECT * as animals FROM animals;
 ROLLBACK;
 
 BEGIN;
@@ -32,11 +35,13 @@ WHERE date_of_birth='jan-1-2022';
 SAVEPOINT update;
 UPDATE animals
 SET weight_kg= weight_kg*-1;
+SELECT * as animals FROM animals;
 ROLLBACK;
 
 UPDATE animals
 SET weight_kg=weight_kg* -1
 WHERE weight_kg<0;
+SELECT * as animals FROM animals;
 COMMIT;
 
 /*aggregate queries*/
