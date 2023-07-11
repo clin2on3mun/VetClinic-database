@@ -13,7 +13,7 @@ BEGIN;
 UPDATE animals SET species='unspecified';
 SELECT * as animals FROM animals;
 ROLLBACK;
-SELECT * as animals FROM animals;
+SELECT *  FROM animals;
 
 BEGIN;
 UPDATE animals
@@ -21,19 +21,19 @@ SET species='digimon'
 WHERE name LIKE '%mon';
 UPDATE animals SET species='pokemon'
 WHERE species IS NULL;
-SELECT * as animals FROM animals;
+SELECT * FROM animals;
 COMMIT;
 
 BEGIN;
 DELETE FROM ANIMALS;
-SELECT * as animals FROM animals;
+SELECT * FROM animals;
 ROLLBACK;
-SELECT * as animals FROM animals;
+SELECT * FROM animals;
 
 BEGIN;
 DELETE FROM animals
 WHERE date_of_birth='jan-1-2022';
-SELECT * as animals FROM animals;
+SELECT * FROM animals;
 SAVEPOINT update;
 UPDATE animals
 SET weight_kg= weight_kg*-1;
@@ -44,7 +44,7 @@ SELECT * as animals FROM animals;
 UPDATE animals
 SET weight_kg=weight_kg* -1
 WHERE weight_kg<0;
-SELECT * as animals FROM animals;
+SELECT * FROM animals;
 COMMIT;
 
 /*aggregate queries*/
