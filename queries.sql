@@ -13,6 +13,7 @@ BEGIN;
 UPDATE animals SET species='unspecified';
 SELECT * as animals FROM animals;
 ROLLBACK;
+SELECT * as animals FROM animals;
 
 BEGIN;
 UPDATE animals
@@ -27,6 +28,7 @@ BEGIN;
 DELETE FROM ANIMALS;
 SELECT * as animals FROM animals;
 ROLLBACK;
+SELECT * as animals FROM animals;
 
 BEGIN;
 DELETE FROM animals
@@ -37,6 +39,7 @@ UPDATE animals
 SET weight_kg= weight_kg*-1;
 SELECT * as animals FROM animals;
 ROLLBACK;
+SELECT * as animals FROM animals;
 
 UPDATE animals
 SET weight_kg=weight_kg* -1
