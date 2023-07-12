@@ -2,7 +2,7 @@
 CREATE DATABASE vet_clinic;
 
 CREATE TABLE animals (
-    id INT,
+    id INT GENERATED ALWAYS AS IDENTITY,
     name VARCHAR,
     date_of_birth DATE,
     escape_attempt INT,
@@ -12,3 +12,27 @@ CREATE TABLE animals (
 );
 ALTER TABLE animals RENAME escape_attempt TO escape_attempts;
 ALTER TABLE animals ADD species VARCHAR;
+
+CREATE TABLE Owners(
+ ID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+ full_name VARCHAR,
+ age INT);
+
+CREATE TABLE SPECIES(
+ ID INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+ name VARCHAR);
+
+ALTER TABLE animals
+DROP COLUMN species;
+
+ALTER TABLE animals
+ADD COLUMN species_id INTEGER,
+ADD CONSTRAINT fk_species
+FOREIGN KEY(species_id)
+REFERENCES species(ID);
+
+ALTER TABLE animals
+ADD COLUMN owner_id INTEGER,
+ADD CONSTRAINT fk_owners
+FOREIGN KEY(owner_id)
+REFERENCES owners(ID);
