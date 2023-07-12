@@ -60,7 +60,7 @@ SELECT species, AVG(escape_attempts) AS average_escape_attempts
 FROM animals
 WHERE date_of_birth BETWEEN 'jan-1-1990' AND 'jan-1-2000'
 GROUP BY species;
-
+/*querying  tables using join */
 SELECT name from animals
 JOIN owners ON owner_id = owners.id
 WHERE owners.full_name='Melody Pond';
@@ -76,9 +76,10 @@ SELECT species.name,COUNT(animals.id) as animalsCount from animals
 jOIN species ON species_id = species.id
 GROUP BY species.name;
 
-SELECT animals.name, owners.full_name from animals 
+SELECT animals.name, owners.full_name,species.name from animals
 JOIN owners ON owner_id = owners.id
-WHERE full_name='Jennifer Orwell';
+JOIN  species ON species_id= species.id
+WHERE full_name='Jennifer Orwell' AND species.name='Digimon';
 
 SELECT animals.name, owners.full_name from animals 
 JOIN owners ON owner_id = owners.id
