@@ -125,7 +125,6 @@ follow all the previous steps
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **[Add animal owner table]**
 - [ ] **[Add Doctor Table]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
