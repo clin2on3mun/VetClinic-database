@@ -89,3 +89,5 @@ SELECT owners.full_name, COUNT(animals.id) AS count
 FROM animals
 JOIN owners ON owners.id = animals.owner_id
 GROUP BY owners.full_name;
+ORDER BY count DESC
+LIMIT 1;
