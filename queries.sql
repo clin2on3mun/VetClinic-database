@@ -37,9 +37,9 @@ SELECT * FROM animals;
 SAVEPOINT update;
 UPDATE animals
 SET weight_kg= weight_kg*-1;
-SELECT * as animals FROM animals;
+SELECT * FROM animals;
 ROLLBACK;
-SELECT * as animals FROM animals;
+SELECT *  FROM animals;
 
 UPDATE animals
 SET weight_kg=weight_kg* -1
