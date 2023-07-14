@@ -91,3 +91,65 @@ JOIN owners ON owners.id = animals.owner_id
 GROUP BY owners.full_name;
 ORDER BY count DESC
 LIMIT 1;
+
+SELECT a.name
+FROM animals a
+JOIN visits v ON a.id = v.animal
+JOIN vets  ON v.vet = vets.vet_id
+WHERE vets.name = 'William Tatcher'
+ORDER BY v.visit_date DESC
+LIMIT 1;
+
+SELECT count(*)as animals FROM animals a
+JOIN visits v ON a.id = v.animal
+JOIN vets ON v.vet = vets.vet_id
+WHERE vets.name= 'Stephanie Mendez';
+
+SELECT vets.name, species.name from vets
+FULL OUTER JOIN specialization s ON s.vet = vets.vet_id
+FULL OUTER JOIN species ON  species.id = s.id;
+
+
+
+SELECT a.name, COUNT(v.id) AS visit_count
+FROM animals a
+JOIN visits v ON a.id = v.animal
+GROUP BY a.id, a.name
+ORDER BY visit_count DESC
+LIMIT 1;
+
+SELECT a.name
+FROM animals a
+JOIN visits vs ON a.id = vs.animal
+JOIN Vets  ON vs.vet = Vets.vet_id
+WHERE VETS.name = 'Maisy Smith'
+ORDER BY vs.visit_date ASC
+LIMIT 1;
+
+
+SELECT a.name, vt.name, v.visit_date
+FROM animals a
+JOIN visits v ON a.id = v.animal
+JOIN vets vt ON v.vet = vt.vet_id
+WHERE v.visit_date = (
+    SELECT MAX(visit_date)
+    FROM visits
+)
+LIMIT 1;
+
+SELECT COUNT(*) AS num_visit_no_unspecialized from visits vs
+JOIN vets vt ON vs.vet = vt.vet_id
+JOIN animals a ON a.id = vs.animal
+LEFT JOIN specialization s ON s.vet = vt.vet_id AND a.species_id = s.species
+WHERE s.vet is NULL;
+
+SELECT species.name, Count(*) from visits
+JOIN animals ON visits.animal =animals.id
+JOIN species ON species.id= animals.species_id
+JOIN Vets vt ON vt.vet_id = visits.vet
+WHERE vt.name ='Maisy Smith'
+GROUP BY species.name
+LIMIT 1;
+
+
+
