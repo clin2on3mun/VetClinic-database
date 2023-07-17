@@ -58,3 +58,8 @@ VALUES(1,1, 'may-24-2020'),(1,3, 'Jul-22-2020'),(2,4,'feb-2-2021'),(3,2,'jan-5-2
 (8,4,'OCT-3-2020'),(8,4,'NOV-4-2020'),(9,2,'JAN-24-2019'),(9,2,'MAY-15-2019'),
 (9,2,'FEB-27-2020'),(9,2,'Aug-3-2020'),(10,3,'MAY-24-2020'),(10,1,'JAN-11-2021');
 
+-- PERFORMANCE OPTIMIZATION
+
+INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id FROM animals) animal_ids, (SELECT id FROM vets) vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;
+
+insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
