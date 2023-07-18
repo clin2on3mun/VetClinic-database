@@ -62,3 +62,20 @@ CREATE TABLE visits (
     CONSTRAINT fk_vet FOREIGN KEY (vet) REFERENCES vets(vet_id),
     PRIMARY KEY (ID)
 );
+
+Alter Table
+visits RENAME COLUMN animal to animal_id;
+
+Alter Table
+visits RENAME COLUMN vet to vet_id;
+
+Alter Table
+visits RENAME COLUMN visit_date to date_of_visit;
+
+-- PERFORMANCE OPTIMIZATION
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+CREATE INDEX idx_animal_id ON visits(animal_id);
+CREATE INDEX idx_vet_id ON visits(vet_id);
+CREATE INDEX idx_email ON owners(email);

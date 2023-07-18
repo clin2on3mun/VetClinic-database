@@ -131,6 +131,12 @@ follow all the previous steps
 - Twitter: [@twitterhandle](https://twitter.com/ClintonMunana)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/munana-clinton/)
 
+👤 **Author2**
+
+- GitHub: [@githubhandle](https://github.com/vangelif)
+- Twitter: [@twitterhandle](https://twitter.com/vangfot)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/vangfot/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
