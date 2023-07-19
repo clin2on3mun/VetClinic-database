@@ -1,0 +1,24 @@
+CREATE TABLE patients(
+id INT GENERATED ALWAYS AS IDENTITY,
+Name VARCHAR(50)
+Date_of_birth DATE,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE medical_histories(
+id INT GENERATED ALWAYS AS IDENTITY,
+admitted_at TIMESTAMP,
+patient_id INT,
+ADD CONSTRAINTS fk_patient_id
+FOREIGN KEY(patient_id)
+REFERENCES patients(id)
+status VARCHAR(50),
+PRIMARY KEY (id)
+);
+
+CREATE TABLE treatments(
+id INT GENERATED ALWAYS AS IDENTITY,
+type VARCHAR(50),
+name VARCHAR(50),
+PRIMARY KEY (id)
+);
